@@ -1,0 +1,73 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                    Frog_01.jpg  label:                       frog
+ 2 key:                     Car_01.jpg  label:                        car
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                     Dog_02.jpg  label:                        dog
+
+     MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog
+
+                    Car_01.jpg: 
+Real:                        car   Classifier:          sports car, sport car
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Car_01.jpg: 
+Real:                        car   Classifier:          sports car, sport car  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+CNN Architecture used: vgg
+
+Total number of images = 4
+Number of dog images = 2
+Number of not-dog images = 2
+Percentage pct_match = 50.0
+Percentage pct_correct_dogs = 100.0
+Percentage pct_correct_breed = 0.0
+Percentage pct_correct_notdogs = 100.0
+No misclassified dog instances. 
+Misclassified breed instance:  ['dog', 'golden retriever', 0, 1, 1]
+Misclassified breed instance:  ['dog', 'golden retriever', 0, 1, 1]
+
+** Total Elapsed Runtime: 0:0:8
